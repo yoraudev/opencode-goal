@@ -4,28 +4,6 @@ Give OpenCode 2 a task with `/goal <task>` and the agent keeps working on it, tu
 
 The agent reports the goal achieved with a `goal_done` tool. A separate model request then reads the goal and the conversation and decides whether the work is really done and verified. If it is not, its reason goes back to the agent and the work continues.
 
-> [!WARNING]
-> **While a goal is active, the agent acts on its own for many turns without you reading along.** Read this before installing.
->
-> Each turn the agent runs tools with whatever permissions you have given OpenCode, and the next turn starts as soon as the last one ends. Nothing in this plugin asks you before an action.
->
-> What can go wrong:
->
-> - **Unwanted actions.** A model that misunderstands the goal can edit, delete or overwrite work, run commands or install packages turn after turn before you notice. OpenCode 2 allows most actions by default.
-> - **Cost.** Every turn is a full model request, and every claim that the goal is achieved adds one more for the check. A goal can use up to its turn limit, 30 turns by default.
-> - **Premature or wrong results.** The check is a model too. It judges from a shortened transcript and can accept work that is not done, or keep rejecting work that is.
-> - **Your conversation goes to the check's model.** The independent check sends the recent conversation, including tool output, to the session's model or to the model you set for it.
-> - **Prompt injection.** Content the agent reads while working, such as files, web pages or command output, can try to steer it. Without you watching each turn, there is less chance to notice.
->
-> How to lower the risk:
->
-> - Keep OpenCode's permission prompts on for what must not happen without you, and its `deny` rules for what must never happen.
-> - Work in a repository with committed history so that changes can be undone.
-> - Give goals that can be verified, such as tests that must pass, and lower `maxTurns` for open-ended tasks.
-> - Watch the first goals you run, and press `esc` to pause one that goes wrong.
->
-> You use this at your own risk; see [LICENSE](LICENSE).
-
 ## Install
 
 Requires OpenCode 2.

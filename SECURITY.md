@@ -30,7 +30,7 @@ Examples of issues that should be reported:
 
 ## What does not
 
-The following are known properties of the tool, described in the [README](README.md), and are not treated as vulnerabilities:
+The following are known properties of the tool and are not treated as vulnerabilities:
 
 - the agent taking unwanted actions while it works on a goal without you, within the permissions you gave OpenCode
 - the agent claiming a goal is achieved when it is not, and the independent check agreeing
