@@ -1,0 +1,25 @@
+{
+  "name": "opencode-goal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A /goal command for OpenCode 2 that keeps the agent working until a task is done and independently checked",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "files": [
+    "plugin",
+    "docs",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  },
+  "devDependencies": {
+    "@opencode/plugin": "^2.0.28",
+    "effect": "^4.0.1"
+  },
+  "peerDependencies": {
+    "effect": "^4.0.0"
+  }
+}
