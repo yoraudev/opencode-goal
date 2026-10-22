@@ -1,5 +1,7 @@
 # OpenCode Goal
 
+> **Note:** This is an unofficial, community-made plugin. It is not affiliated with, endorsed by, or maintained by the official OpenCode project.
+
 Give OpenCode 2 a task with `/goal <task>` and the agent keeps working on it, turn after turn and without waiting for you, until the task is done and an independent check agrees.
 
 The agent reports the goal achieved with a `goal_done` tool. A separate model request then reads the goal and the conversation and decides whether the work is really done and verified. If it is not, its reason goes back to the agent and the work continues.
